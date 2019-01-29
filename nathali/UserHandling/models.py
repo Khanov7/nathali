@@ -18,3 +18,6 @@ class UserProfile(AbstractUser):
     profilePicture = models.FileField(verbose_name='profile picture', upload_to='Profile Pictures')
     status = models.CharField(choices=USER_STATUS,max_length=50)
     birthday = models.DateField()
+    occupation = models.CharField(max_length=30, default="")
+    country = models.CharField(default="",max_length=50)
+    city = models.CharField(default="",max_length=50)
